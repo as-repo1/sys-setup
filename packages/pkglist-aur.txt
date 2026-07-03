@@ -1,0 +1,23 @@
+# AUR packages — installed via yay
+# Note: yay itself is bootstrapped in install.sh before this list is processed
+
+# Browsers
+floorp-bin
+zen-browser-bin
+brave-bin
+microsoft-edge-stable-bin
+
+# Apps
+ferdium-bin
+localsend-bin
+parabolic
+helvum-git
+appimagelauncher
+opencode-bin
+antigravity
+
+# Shell / System
+noctalia-shell
+
+# AppImage support
+appimagelauncher

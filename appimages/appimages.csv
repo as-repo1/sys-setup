@@ -1,0 +1,7 @@
+# AppImages manifest
+# Format: name,url,sha256(auto=skip check)
+AnythingLLMDesktop,https://github.com/Mintplex-Labs/anything-llm/releases/latest/download/AnythingLLMDesktop.AppImage,auto
+LM-Studio,https://releases.lmstudio.ai/linux/x64/latest/LM-Studio-linux-x64.AppImage,auto
+Pinokio,https://github.com/pinokiocomputer/pinokio/releases/latest/download/Pinokio-Linux.AppImage,auto
+iDescriptor,https://github.com/iDescriptor/iDescriptor/releases/latest/download/iDescriptor-Linux_x86_64.AppImage,auto
+AppImagePool,https://github.com/prateekmedia/appimagepool/releases/latest/download/appimagepool-x86_64.AppImage,auto

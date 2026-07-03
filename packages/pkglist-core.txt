@@ -1,0 +1,209 @@
+# Core system packages — always installed
+# Generated from EndeavourOS workstation (MSI Thin GF63, Intel i5-12500H + Arc A370M)
+
+# Base
+base
+base-devel
+linux
+linux-firmware
+linux-firmware-intel
+linux-headers
+sudo
+git
+curl
+wget
+rsync
+reflector
+pacman-contrib
+rebuild-detector
+downgrade
+pkgfile
+
+# CPU & Firmware
+intel-ucode
+thermald
+auto-cpufreq
+
+# GPU — Intel Arc A370M + Iris Xe
+mesa
+mesa-utils
+vulkan-intel
+vulkan-tools
+vulkan-validation-layers
+vulkan-icd-loader
+lib32-vulkan-intel
+lib32-vulkan-icd-loader
+intel-media-driver
+intel-compute-runtime
+intel-gpu-tools
+libva
+libva-intel-driver
+libva-utils
+libdrm
+lib32-libdrm
+level-zero-loader
+level-zero-headers
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-audio
+wireplumber
+alsa-utils
+alsa-firmware
+alsa-plugins
+sof-firmware
+rtkit
+pavucontrol
+
+# Network
+networkmanager
+networkmanager-openvpn
+networkmanager-openconnect
+iwd
+wireless-regdb
+ethtool
+bind
+whois
+wget
+
+# Bluetooth
+bluez
+bluez-utils
+bluez-obex
+blueman
+
+# Wayland / Niri stack
+niri
+waybar
+fuzzel
+swaybg
+swaylock
+wl-clipboard
+cliphist
+grim
+slurp
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-user-dirs
+xdg-user-dirs-gtk
+xdg-utils
+xwayland-run-git
+polkit-gnome
+mako
+
+# Display / Input
+xf86-input-libinput
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xinput
+xorg-xkill
+xorg-xdpyinfo
+xterm
+
+# Shell & Terminal
+fish
+bash-completion
+kitty
+ghostty
+alacritty
+starship
+
+# CLI Tools
+neovim
+bat
+lsd
+yazi
+btop
+htop
+nvtop
+fastfetch
+glances
+tree
+tldr
+lsb-release
+inxi
+hwinfo
+dmidecode
+usbutils
+lsscsi
+sg3_utils
+smartmontools
+hdparm
+duf
+ranger
+
+# File Manager / GVFS
+nautilus
+nemo
+thunar
+pcmanfm
+gvfs
+gvfs-afc
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
+
+# Fonts
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+noto-fonts-extra
+ttf-dejavu
+ttf-liberation
+ttf-opensans
+ttf-bitstream-vera
+cantarell-fonts
+
+# Firewall
+firewalld
+
+# Flatpak support
+flatpak
+
+# Containers
+docker
+docker-compose
+
+# Filesystem tools
+btrfs-progs
+ntfs-3g
+exfatprogs
+dosfstools
+f2fs-tools
+jfsutils
+nilfs-utils
+xfsprogs
+e2fsprogs
+lvm2
+cryptsetup
+device-mapper
+dmraid
+mdadm
+
+# Boot
+grub
+efibootmgr
+efitools
+os-prober
+dracut
+
+# Security
+openssh
+haveged
+
+# System
+upower
+power-profiles-daemon
+modemmanager
+accountsservice
+avahi
+nss-mdns
+logrotate
+man-db
+man-pages
+systemd-sysvcompat

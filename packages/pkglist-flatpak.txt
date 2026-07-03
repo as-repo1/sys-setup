@@ -1,0 +1,2 @@
+# Flatpak applications
+# com.ktechpit.ultimate-media-downloader

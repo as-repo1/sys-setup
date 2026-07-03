@@ -1,0 +1,50 @@
+-- ==============================================================================
+-- auto_interpolate.lua
+-- Location: ~/.config/mpv/scripts/auto_interpolate.lua
+-- Automatically applies VapourSynth 60 FPS interpolation on standard video files.
+-- ==============================================================================
+
+local function apply_interpolation()
+    -- Get video properties
+    local fps = mp.get_property_number("container-fps", 0)
+    local width = mp.get_property_number("width", 0)
+    
+    -- Only interpolate standard frame rate videos (under 35 FPS) to avoid double-interpolation
+    -- and only for videos with valid width (skip audio-only files)
+    if fps > 0 and fps < 35 and width > 0 then
+        mp.msg.info("Auto-applying VapourSynth 60fps interpolation (Current Video FPS: " .. fps .. ")")
+        
+        -- Override hardware decoding to copy-back since VapourSynth requires it
+        mp.set_property("hwdec", "vaapi-copy")
+        
+        -- Add the VapourSynth filter
+        mp.command("vf add vapoursynth=\"~~/svpflow_interpolation.vpy\":buffered-frames=4:concurrent-frames=4")
+    else
+        mp.msg.info("Skipping VapourSynth interpolation. Video FPS: " .. fps .. " (Width: " .. width .. ")")
+    end
+end
+
+-- Hook file-loaded event (fires whenever a new file is loaded in mpv)
+mp.register_event("file-loaded", apply_interpolation)
+
+-- Keybinding to toggle interpolation on/off manually (Ctrl+I)
+mp.add_key_binding("ctrl+i", "toggle_interpolation", function()
+    local filters = mp.get_property_native("vf", {})
+    local found = false
+    for i, f in ipairs(filters) do
+        if f.name == "vapoursynth" then
+            found = true
+            break
+        end
+    end
+    
+    if found then
+        mp.command("vf remove vapoursynth")
+        mp.osd_message("60FPS Interpolation: OFF")
+    else
+        -- Force copy-back before adding filter
+        mp.set_property("hwdec", "vaapi-copy")
+        mp.command("vf add vapoursynth=\"~~/svpflow_interpolation.vpy\":buffered-frames=4:concurrent-frames=4")
+        mp.osd_message("60FPS Interpolation: ON")
+    end
+end)

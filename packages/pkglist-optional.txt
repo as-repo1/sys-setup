@@ -1,0 +1,74 @@
+# Optional packages — user selects during install
+
+## group:gnome — Full GNOME desktop
+gdm
+gnome-shell
+gnome-control-center
+gnome-tweaks
+gnome-terminal
+gnome-console
+gnome-text-editor
+gnome-disk-utility
+gnome-system-monitor
+gnome-calculator
+gnome-clocks
+gnome-weather
+gnome-usage
+gnome-nettool
+gnome-power-manager
+gnome-keyring
+gnome-themes-extra
+nautilus
+loupe
+sushi
+evince
+showtime
+adwaita-icon-theme
+
+## group:i3 — i3 tiling WM
+i3-wm
+sxhkd
+bspwm
+
+## group:dev — Development tools
+visual-studio-code-bin
+nodejs
+npm
+python
+python-pip
+docker
+docker-compose
+git
+neovim
+obsidian
+
+## group:android — Android development
+android-tools
+android-sdk-cmdline-tools-latest
+scrcpy
+
+## group:media — Media apps
+mpv
+vlc
+yt-dlp
+gst-libav
+gst-plugin-va
+gst-plugins-bad
+gst-plugins-ugly
+libdvdcss
+
+## group:browsers — Additional browsers
+firefox
+google-chrome
+chromium
+
+## group:office — Office/productivity
+evince
+abiword
+gnumeric
+meld
+
+## group:gaming — Gaming/graphics
+nvtop
+clinfo
+intel-gpu-tools

@@ -1,0 +1,29 @@
+# Secrets & credentials
+.env
+*.secret
+id_rsa
+id_ed25519
+*.pem
+*.key
+
+# Browser data (session tokens, cookies)
+dots/brave/
+dots/chrome/
+dots/chromium/
+dots/firefox/
+
+# Large cache / build dirs
+*.AppImage
+.cache/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+*.swp
+*.swo
