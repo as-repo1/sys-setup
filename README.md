@@ -1,9 +1,11 @@
 # sys-setup
 
-> One command to restore my entire Arch/EndeavourOS workstation.
+> One command to restore my entire workstation across Arch, Ubuntu, Fedora, and macOS.
 
 [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?logo=arch-linux&logoColor=white)](https://archlinux.org/)
-[![EndeavourOS](https://img.shields.io/badge/EndeavourOS-7B2FBE?logo=linux&logoColor=white)](https://endeavouros.com/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![Fedora](https://img.shields.io/badge/Fedora-51A2DA?logo=fedora&logoColor=white)](https://fedoraproject.org/)
+[![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=white)](https://apple.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Machine
@@ -12,11 +14,11 @@
 - **CPU**: Intel Core i5-12500H (16 threads)
 - **GPU**: Intel Arc A370M + Iris Xe
 - **Display**: 1920×1080 @ 144Hz
-- **OS**: EndeavourOS / Arch Linux
+- **OS**: Linux (Arch, Ubuntu, Fedora) / macOS
 
 ## Usage
 
-### On a fresh Arch install:
+### On a fresh install:
 
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/as-repo1/sys-setup/main/install.sh)
@@ -44,12 +46,12 @@ The installer runs through **10 phases** interactively with a Nord-themed CRT te
 
 | Phase | Description                                   |
 | ----- | --------------------------------------------- |
-| 0     | Preflight checks (user, internet, arch, sudo) |
+| 0     | Preflight checks (user, OS detection, package manager) |
 | 1     | Interactive profile selection (Typical / Complete / Custom) |
-| 2     | Mirror ranking with reflector                 |
-| 3     | Chaotic-AUR setup (optional)                  |
-| 4     | Install yay (AUR helper)                      |
-| 5     | Install packages (core → AUR → flatpak)     |
+| 2     | Mirror ranking (Arch) / Package sources (Ubuntu/Fedora) |
+| 3     | Chaotic-AUR / RPM Fusion / Ubuntu Extras      |
+| 4     | Install AUR helpers, PPAs, or COPRs           |
+| 5     | Install packages (Native → Flatpak fallback)  |
 | 6     | Enable systemd services                       |
 | 7     | Stow dotfiles                                 |
 | 8     | Download & register AppImages                 |

@@ -11,7 +11,7 @@ linux-headers
 sudo
 git
 curl
-wget
+
 rsync
 reflector
 pacman-contrib
@@ -67,7 +67,7 @@ wireless-regdb
 ethtool
 bind
 whois
-wget
+
 
 # Bluetooth
 bluez
@@ -95,14 +95,12 @@ polkit-gnome
 mako
 
 # Display / Input
-xf86-input-libinput
-xorg-server
-xorg-xinit
+xwayland
+xorg-xwayland
 xorg-xrandr
-xorg-xinput
-xorg-xkill
-xorg-xdpyinfo
-xterm
+xdg-desktop-portal
+xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 
 # Shell & Terminal
 fish
