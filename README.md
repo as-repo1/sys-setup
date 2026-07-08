@@ -44,19 +44,19 @@ bash install.sh --dry-run
 
 The installer runs through **10 phases** interactively with a Nord-themed CRT terminal UI:
 
-| Phase | Description                                   |
-| ----- | --------------------------------------------- |
-| 0     | Preflight checks (user, OS detection, package manager) |
+| Phase | Description                                                 |
+| ----- | ----------------------------------------------------------- |
+| 0     | Preflight checks (user, OS detection, package manager)      |
 | 1     | Interactive profile selection (Typical / Complete / Custom) |
-| 2     | Mirror ranking (Arch) / Package sources (Ubuntu/Fedora) |
-| 3     | Chaotic-AUR / RPM Fusion / Ubuntu Extras      |
-| 4     | Install AUR helpers, PPAs, or COPRs           |
-| 5     | Install packages (Native → Flatpak fallback)  |
-| 6     | Enable systemd services                       |
-| 7     | Stow dotfiles                                 |
-| 8     | Download & register AppImages                 |
-| 9     | Post-install (git, docker, fish shell)        |
-| 10    | Summary + reboot prompt                       |
+| 2     | Mirror ranking (Arch) / Package sources (Ubuntu/Fedora)     |
+| 3     | Chaotic-AUR / RPM Fusion / Ubuntu Extras                    |
+| 4     | Install AUR helpers, PPAs, or COPRs                         |
+| 5     | Install packages (Native → Flatpak fallback)               |
+| 6     | Enable systemd services                                     |
+| 7     | Stow dotfiles                                               |
+| 8     | Download & register AppImages                               |
+| 9     | Post-install (git, docker, fish shell)                      |
+| 10    | Summary + reboot prompt                                     |
 
 ### Installation Profiles
 
