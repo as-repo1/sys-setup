@@ -66,6 +66,154 @@ The installer runs through **10 phases** interactively with a Nord-themed CRT te
 
 ---
 
+## Visual Walkthrough
+
+### Phase 1: Welcome & Profile Selection
+
+The installer welcomes you with a Nord-themed CRT UI and guides you through profile selection:
+
+![Installer Welcome & Profile Selection](images/1.png)
+
+Choose between **Typical** (recommended for fast setup), **Complete** (everything), or **Custom** (pick what you want).
+
+### Phase 1b: Customization Categories
+
+If you select Custom, browse through available categories and toggle what to install:
+
+![Customization Categories](images/3.png)
+
+Select from Desktop/Window Manager, Browsers, Chat & Messaging, Multimedia, Development Tools, Notes & Office, File Managers, Utilities, Gaming, and AI & Local LLMs.
+
+### Phase 1c & 1d: Component Selection
+
+Choose your desktop environment and individual packages per category:
+
+**Desktop/Window Manager Options:**
+
+![Desktop Environment Selection](images/4.png)
+
+**Browser Selection:**
+
+![Browser Selection](images/2.png)
+
+Each category follows the same interactive pattern, letting you pick exactly what you need.
+
+---
+
+## Available Options by Category
+
+### Desktop / Window Manager
+
+Choose your preferred desktop environment or window manager:
+
+- **Niri** (Wayland tiling) — *Recommended*
+- **GNOME** (Full desktop environment)
+- **i3 + bspwm** (X11 tiling)
+
+### Browsers
+
+Select one or more browsers:
+
+- **Zen Browser** — Firefox-based, privacy-focused
+- **Firefox** — Mozilla's standard browser
+- **Google Chrome** — Google's browser
+- **Brave** — Chromium + built-in ad-block
+- **Floorp** — Firefox-based, highly customizable
+- **Microsoft Edge** — Chromium-based
+- **Librewolf** — Hardened Firefox fork
+- **Vivaldi** — Feature-rich Chromium browser
+- **Chromium** — Open-source Chrome
+- **Tor Browser** — Anonymous browsing
+
+### Chat & Messaging
+
+Communication tools:
+
+- **Telegram** — Encrypted messaging
+- **Ferdium** — Multi-service messenger aggregator
+- **Discord** — Community chat platform
+- **Vesktop** — Discord client (alternative)
+- **Signal** — Secure messaging
+- **Slack** — Workspace communication
+- **Element** — Matrix protocol client
+- **Thunderbird** — Email and messaging
+
+### Multimedia
+
+Media creation and playback:
+
+- **mpv** — Lightweight media player
+- **VLC** — Universal media player
+- **yt-dlp** — YouTube downloader
+- **Parabolic** — GUI for yt-dlp
+- **Celluloid** — GNOME mpv frontend
+- **OBS Studio** — Recording & streaming
+- **Kdenlive** — Video editor
+- **Audacity** — Audio editor
+
+### Development Tools
+
+Programming and development utilities:
+
+- **Neovim** — Terminal text editor
+- **Git & GitHub CLI** — Version control
+- **Docker** — Container platform
+- **Android SDK** — Android development
+- **Base development packages** — Build tools, headers, compilers
+
+### Notes & Office
+
+Productivity applications:
+
+- **LibreOffice** — Office suite
+- **Thunderbird** — Email + calendar
+- **GNOME Calendar** — Calendar app
+- **Text editors** — Various document editors
+
+### File Managers
+
+File management tools:
+
+- **Ranger** — Terminal file manager
+- **Nautilus / Thunar** — GUI file managers
+- **Yazi** — Modern terminal file browser
+- **LSD** — Colored `ls` alternative
+
+### Utilities
+
+System and general utilities:
+
+- **Starship** — Shell prompt
+- **Fish Shell** — User-friendly shell
+- **btop / htop** — System monitoring
+- **fastfetch** — System info display
+- **bat** — Syntax-highlighted `cat`
+- **tree** — Directory tree viewer
+- **tldr** — Simplified man pages
+- **lazygit** — Terminal git UI
+- **stow** — Dotfile manager
+- **curl / wget** — Download tools
+
+### Gaming
+
+Gaming and emulation tools:
+
+- **Steam** — Game platform
+- **Lutris** — Gaming platform manager
+- **Wine** — Windows compatibility
+- **Emulators** — Various console emulators
+
+### AI & Local LLMs
+
+Artificial intelligence tools:
+
+- **AnythingLLM Desktop** — AppImage
+- **LM Studio** — AppImage
+- **Pinokio** — AppImage
+- **Ollama** — Local LLM runtime
+
+---
+
 ## Structure
 
 ```
