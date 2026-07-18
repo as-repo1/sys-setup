@@ -67,6 +67,8 @@ check_cmd() { command -v "$1" &>/dev/null; }
 
 # Dynamic terminal width (subtracting 4 for left/right margins)
 TERM_WIDTH=$((${COLUMNS:-$(tput cols 2>/dev/null || echo 80)} - 4))
+# Dynamic terminal height (subtracting 5 for headers/footers)
+TERM_HEIGHT=$((${LINES:-$(tput lines 2>/dev/null || echo 24)} - 5))
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  OS DETECTION
@@ -201,6 +203,7 @@ fi
 gum_choose_multi() {
     local header="$1"; shift
     gum choose --no-limit \
+        --height="$TERM_HEIGHT" \
         --header="$header" \
         --header.foreground="$NORD8" \
         --cursor.foreground="$NORD12" \
@@ -272,6 +275,7 @@ gum style --foreground="$NORD3" --margin="0 3" \
 echo ""
 
 MODE=$(gum choose \
+    --height="$TERM_HEIGHT" \
     --header="  Select Installation Profile" \
     --header.foreground="$NORD8" \
     --cursor.foreground="$NORD12" \
