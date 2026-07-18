@@ -1,0 +1,12 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ANDROID_HOME:/opt/android\x2dsdk
+SETUVAR __fish_initialized:4300
+SETUVAR __garuda_garuda_update_ignore:true
+SETUVAR fish_color_command:\x2381A1C1
+SETUVAR fish_color_comment:\x234C566A
+SETUVAR fish_color_error:\x23E06C75\x1e\x2d\x2dbold
+SETUVAR fish_color_operator:\x23D08770
+SETUVAR fish_color_param:\x23A3BE8C
+SETUVAR fish_color_quote:\x2388C0D0
+SETUVAR fish_user_paths:/opt/android\x2dsdk/cmdline\x2dtools/latest/bin\x1e/home/chaos/\x2elocal/bin\x1e/home/chaos/Applications

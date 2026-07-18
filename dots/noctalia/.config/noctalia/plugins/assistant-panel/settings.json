@@ -1,0 +1,26 @@
+{
+  "maxHistoryLength": 150,
+  "panelDetached": true,
+  "panelPosition": "right",
+  "panelHeightRatio": 0.85,
+  "panelWidth": 520,
+  "scale": 1,
+  "ai": {
+    "provider": "google",
+    "models": {},
+    "apiKeys": {
+      "google": "AIzaSyBRg8peMQb7nda3d1oJBFZnF2usQC4Y6gI"
+    },
+    "temperature": 0.8,
+    "systemPrompt": "You are a helpful assistant show me in points and tabular format if needed",
+    "openaiLocal": false,
+    "openaiBaseUrl": "https://api.openai.com/v1/chat/completions",
+    "model": ""
+  },
+  "translator": {
+    "backend": "google",
+    "deeplApiKey": "",
+    "realTimeTranslation": true
+  },
+  "attachmentStyle": "connected"
+}
