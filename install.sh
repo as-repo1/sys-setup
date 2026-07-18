@@ -224,11 +224,11 @@ gum_confirm() {
 gum_spin() {
     local title="$1"; shift
     if $DRY_RUN; then echo -e "  ${YELLOW}[dry-run]${RESET} $*"; return 0; fi
-    gum spin --spinner dot \
+    gum spin --show-output --spinner dot \
         --title=" $title" \
         --title.foreground="$NORD8" \
         --spinner.foreground="$NORD12" \
-        -- "$@" >> "$LOG_FILE" 2>&1
+        -- bash -c '"$@" 2>&1 | tee -a "$LOG_FILE"' _ "$@"
 }
 
 # Styled section header
