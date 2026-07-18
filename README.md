@@ -21,7 +21,7 @@
 ### On a fresh install:
 
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/as-repo1/sys-setup/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/as-repo1/sys-setup/master/install.sh)
 ```
 
 ### From a local clone:
