@@ -65,6 +65,9 @@ run() {
 
 check_cmd() { command -v "$1" &>/dev/null; }
 
+# Dynamic terminal width (subtracting 4 for left/right margins)
+TERM_WIDTH=$((${COLUMNS:-$(tput cols 2>/dev/null || echo 80)} - 4))
+
 # ═══════════════════════════════════════════════════════════════════════════════
 #  OS DETECTION
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -237,7 +240,7 @@ gum_header() {
     gum style \
         --foreground="$NORD8" --border-foreground="$NORD7" \
         --border=double --align=center \
-        --width=52 --margin="0 2" --padding="0 1" --bold \
+        --width="$TERM_WIDTH" --margin="0 2" --padding="0 1" --bold \
         "◆ $1 ◆"
     echo ""
 }
@@ -248,14 +251,14 @@ echo ""
 gum style \
     --foreground="$NORD8" --border-foreground="$NORD7" \
     --border=double --align=center \
-    --width=52 --margin="1 2" --padding="1 3" \
+    --width="$TERM_WIDTH" --margin="1 2" --padding="1 3" \
     "$(echo -e '  SYSTEM OPERATIONAL // UPLINK-9000\n\n  ██████╗██╗  ██╗ █████╗  ██████╗ ███████╗\n  ██╔════╝██║  ██║██╔══██╗██╔═══██╗██╔════╝\n  ██║     ███████║███████║██║   ██║███████╗\n  ██║     ██╔══██║██╔══██║██║   ██║╚════██║\n  ╚██████╗██║  ██║██║  ██║╚██████╔╝███████║\n   ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝\n\n  ----------------------------------------\n  NSF SOL - O'\''NEIL // FORCE IN READINESS')"
 
-gum style --foreground="$NORD12" --bold --align=center --width=52 --margin="0 2" \
+gum style --foreground="$NORD12" --bold --align=center --width="$TERM_WIDTH" --margin="0 2" \
     "Workstation Bootstrap  ·  sys-setup"
-gum style --foreground="$NORD3" --align=center --width=52 --margin="0 2" \
+gum style --foreground="$NORD3" --align=center --width="$TERM_WIDTH" --margin="0 2" \
     "OS: $OS  ·  LOG → $LOG_FILE"
-$DRY_RUN && gum style --foreground="$NORD13" --bold --align=center --width=52 --margin="0 2" \
+$DRY_RUN && gum style --foreground="$NORD13" --bold --align=center --width="$TERM_WIDTH" --margin="0 2" \
     "⚡ WARNING // DRY RUN MODE ACTIVE // NO CHANGES WILL BE WRITTEN"
 echo ""
 
@@ -1266,7 +1269,7 @@ echo ""
 gum style \
     --foreground="46" --border-foreground="46" \
     --border=double --align=center \
-    --width=52 --margin="1 2" --padding="1 3" \
+    --width="$TERM_WIDTH" --margin="1 2" --padding="1 3" \
     "✓  Setup Complete!" \
     "" \
     "OS: $OS  ·  Your workstation is ready." \
